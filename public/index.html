@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        if(location.pathname !== "/index.php"){
+            location.href = "/login.html"
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FormData</title>
+</head>
+<body>
+<!--<form id="form">-->
+    <!--姓名：<input type="text" name="login_name" class="login_name">-->
+    <!--密码：<input type="text" name="login_pwd" class="login_pwd">-->
+<!--</form>-->
+<!--<button id="btn">提交后台</button>-->
+<!--<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>-->
+<!--<script>-->
+    <!--$('#btn').click(e => {-->
+        <!--// console.log(666)-->
+        <!--// let formData = new FormData($('#form')[0])-->
+        <!--// formData.append('version', '1.0')-->
+        <!--// console.log(formData)-->
+        <!--// let formData = {-->
+        <!--//     login_name: $('.login_name').val(),-->
+        <!--//     login_pwd: $('.login_pwd').val()-->
+        <!--// }-->
+        <!--let formData = JSON.stringify({-->
+            <!--login_name: $('.login_name').val(),-->
+            <!--login_pwd: $('.login_pwd').val()-->
+        <!--})-->
+        <!--$.ajax({-->
+            <!--type: "POST",-->
+            <!--url: "http://localhost:9989/data.php",-->
+            <!--data: formData,-->
+            <!--// processData: false,  // 不处理数据-->
+            <!--contentType: 'application/json; charset=UTF-8',-->
+            <!--// contentType: 'text/plain;charset=UTF-8',-->
+            <!--success: msg => {-->
+                <!--console.log(msg)-->
+            <!--}-->
+        <!--});-->
+    <!--})-->
+<!--</script>-->
+
+<h1>我的首页</h1>
+
+</body>
+</html>

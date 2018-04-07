@@ -5,9 +5,11 @@
  * Date: 2018/3/31
  * Time: 20:52
  */
-//namespace app\host\controller;
+namespace app\index\controller;
 require(__DIR__ . "/../../util/Tool.php");
-class Host
+use think\Controller;
+use think\Request;
+class Host extends Controller
 {
 
     public $sqlData = null;
@@ -17,7 +19,7 @@ class Host
         $this->sqlData = Tool::getSqlInfo();
     }
 
-    function test(){
+    function demo(Request $request){
         return 'aaa';
     }
 

@@ -10,17 +10,24 @@
 // +----------------------------------------------------------------------
 
 use think\Route;
+
 //创建规则[demo/]，后面有二个可选参数，替换掉原来较长的URL地址
-Route::rule('demo/[:name]','index/index/demo/');
-Route::rule('host/test','host/host/test');
+Route::rule('index/demo/[:name]', 'index/index/demo/');
+Route::rule('host/demo', 'index/host/demo');
+Route::get('/', function () {
+    return 'Hello,world!';
+});
 
 return [
     '__pattern__' => [
         'name' => '\w+',
     ],
-    '[demo]'     => [
-        ':id'   => ['index/demo', ['method' => 'get'], ['id' => '\d+']],
+    '[demo]' => [
+        ':id' => ['index/demo', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/demo', ['method' => 'post']],
     ],
-
+    '[host]' => [
+        ':id' => ['host/demo', ['method' => 'get'], ['id' => '\d+']],
+        ':name' => ['host/demo', ['method' => 'post']],
+    ],
 ];
